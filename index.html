@@ -3,30 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catch & Reel - Premium Fishing Solutions</title>
+    <title>CatchMaster Fishing Co. - Premium Fishing Gear & Supplies</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
-            <div class="logo">🎣 Catch & Reel</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#products">Products</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <span class="logo-icon">⚓</span>
+                    <span class="logo-text">CatchMaster</span>
+                </div>
+                <button class="menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#products" class="nav-link">Products</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1>Experience Premium Fishing Adventures</h1>
-            <p>Your trusted partner for unforgettable fishing expeditions</p>
-            <button class="cta-button">Book Your Charter Today</button>
+            <h1>Cast Your Line to Success</h1>
+            <p>Premium fishing gear, expert guidance, and unbeatable selection for anglers of all levels</p>
+            <button class="cta-button" onclick="document.getElementById('products').scrollIntoView({behavior: 'smooth'})">Shop Now</button>
+        </div>
+        <div class="hero-image">
+            <div class="hero-placeholder">🎣</div>
         </div>
     </section>
 
@@ -36,24 +49,34 @@
             <h2>Our Services</h2>
             <div class="services-grid">
                 <div class="service-card">
+                    <div class="service-icon">🎯</div>
+                    <h3>Expert Consultation</h3>
+                    <p>Get personalized advice from our experienced fishing professionals to find the perfect gear for your needs.</p>
+                </div>
+                <div class="service-card">
                     <div class="service-icon">🚤</div>
-                    <h3>Charter Fishing Trips</h3>
-                    <p>Full-day and half-day guided fishing charters with experienced captains on well-maintained vessels.</p>
+                    <h3>Guided Fishing Tours</h3>
+                    <p>Join our guided expeditions to the best fishing spots with certified guides and all-inclusive packages.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">🎓</div>
-                    <h3>Fishing Lessons</h3>
-                    <p>Learn fishing techniques from beginners to advanced anglers. One-on-one and group instruction available.</p>
+                    <div class="service-icon">🔧</div>
+                    <h3>Gear Maintenance</h3>
+                    <p>Professional cleaning, repair, and maintenance services to keep your equipment in top condition.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">🏪</div>
-                    <h3>Equipment Rental</h3>
-                    <p>High-quality fishing gear and tackle available for rent. All equipment regularly maintained and inspected.</p>
+                    <div class="service-icon">📚</div>
+                    <h3>Fishing Workshops</h3>
+                    <p>Learn new techniques and skills in our hands-on workshops led by championship-winning anglers.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">🍖</div>
-                    <h3>Fish Processing</h3>
-                    <p>Professional cleaning and processing services for your catch. Custom cuts and packaging available.</p>
+                    <div class="service-icon">📦</div>
+                    <h3>Fast Shipping</h3>
+                    <p>Quick and reliable delivery of your favorite fishing gear anywhere in the country.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💳</div>
+                    <h3>Flexible Payment</h3>
+                    <p>Easy payment options including installment plans for premium fishing equipment.</p>
                 </div>
             </div>
         </div>
@@ -66,27 +89,45 @@
             <div class="products-grid">
                 <div class="product-card">
                     <div class="product-image">🎣</div>
-                    <h3>Pro Series Fishing Rods</h3>
-                    <p>Durable, lightweight carbon fiber construction</p>
-                    <span class="price">$89.99 - $249.99</span>
-                </div>
-                <div class="product-card">
-                    <div class="product-image">⚙️</div>
-                    <h3>Advanced Reels</h3>
-                    <p>Smooth drag system with precision bearings</p>
-                    <span class="price">$129.99 - $399.99</span>
-                </div>
-                <div class="product-card">
-                    <div class="product-image">🪝</div>
-                    <h3>Premium Tackle Box</h3>
-                    <p>Waterproof storage with organized compartments</p>
-                    <span class="price">$59.99 - $159.99</span>
+                    <h3>Pro Fishing Rod</h3>
+                    <p>Carbon fiber construction, lightweight and durable</p>
+                    <span class="price">$129.99</span>
+                    <button class="btn-add-cart">Add to Cart</button>
                 </div>
                 <div class="product-card">
                     <div class="product-image">🧵</div>
-                    <h3>Specialty Fishing Line</h3>
-                    <p>Strong, low-stretch braided and monofilament options</p>
-                    <span class="price">$12.99 - $34.99</span>
+                    <h3>Premium Fishing Line</h3>
+                    <p>50lb test, tangle-free braided line</p>
+                    <span class="price">$24.99</span>
+                    <button class="btn-add-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">🪝</div>
+                    <h3>Tackle Box Deluxe</h3>
+                    <p>Waterproof case with 20 compartments</p>
+                    <span class="price">$79.99</span>
+                    <button class="btn-add-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">🎯</div>
+                    <h3>Fish Finder Sonar</h3>
+                    <p>GPS enabled with 3D imaging technology</p>
+                    <span class="price">$299.99</span>
+                    <button class="btn-add-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">👕</div>
+                    <h3>Fishing Jacket Pro</h3>
+                    <p>Water-resistant, breathable mesh fabric</p>
+                    <span class="price">$89.99</span>
+                    <button class="btn-add-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">🎪</div>
+                    <h3>Fishing Lures Pack</h3>
+                    <p>12-piece assorted set for freshwater and saltwater</p>
+                    <span class="price">$34.99</span>
+                    <button class="btn-add-cart">Add to Cart</button>
                 </div>
             </div>
         </div>
@@ -95,35 +136,28 @@
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
+            <h2>Why Choose CatchMaster?</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <h2>About Catch & Reel</h2>
-                    <p>Founded in 2008, Catch & Reel has been serving fishing enthusiasts for over 15 years. We pride ourselves on providing exceptional service, quality equipment, and unforgettable fishing experiences.</p>
-                    <p>Our team of experienced captains and guides are dedicated to making your fishing adventure safe, enjoyable, and successful. Whether you're a seasoned angler or picking up a rod for the first time, we've got you covered.</p>
-                    <ul class="about-list">
-                        <li>✓ 15+ years of industry experience</li>
-                        <li>✓ USCG certified captains</li>
-                        <li>✓ 99.2% customer satisfaction rate</li>
-                        <li>✓ Eco-friendly practices</li>
-                        <li>✓ State-of-the-art equipment</li>
-                    </ul>
+                    <p>With over 30 years of experience in the fishing industry, CatchMaster has become the trusted name for anglers worldwide. We're committed to providing top-quality gear, expert advice, and unforgettable fishing experiences.</p>
+                    <p>Our team of passionate fishing enthusiasts works tirelessly to bring you the latest innovations and time-tested classics in fishing equipment.</p>
                 </div>
-                <div class="about-stats">
-                    <div class="stat">
-                        <h3>10,000+</h3>
-                        <p>Happy Customers</p>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">30+</div>
+                        <div class="stat-label">Years in Business</div>
                     </div>
-                    <div class="stat">
-                        <h3>50+</h3>
-                        <p>Fishing Locations</p>
+                    <div class="stat-card">
+                        <div class="stat-number">50K+</div>
+                        <div class="stat-label">Happy Customers</div>
                     </div>
-                    <div class="stat">
-                        <h3>200+</h3>
-                        <p>Vessels & Boats</p>
+                    <div class="stat-card">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Product SKUs</div>
                     </div>
-                    <div class="stat">
-                        <h3>24/7</h3>
-                        <p>Customer Support</p>
+                    <div class="stat-card">
+                        <div class="stat-number">98%</div>
+                        <div class="stat-label">Customer Satisfaction</div>
                     </div>
                 </div>
             </div>
@@ -133,33 +167,58 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2>Get In Touch</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="info-item">
-                        <h3>📍 Location</h3>
-                        <p>123 Harbor Drive<br>Coastal City, CC 12345</p>
+            <h2>Get in Touch</h2>
+            <div class="contact-wrapper">
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
                     </div>
-                    <div class="info-item">
-                        <h3>📞 Phone</h3>
-                        <p>(555) 123-4567</p>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
                     </div>
-                    <div class="info-item">
-                        <h3>✉️ Email</h3>
-                        <p>info@catchandreel.com</p>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required>
                     </div>
-                    <div class="info-item">
-                        <h3>🕐 Hours</h3>
-                        <p>Mon-Sun: 6:00 AM - 8:00 PM</p>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
                     </div>
-                </div>
-                <form class="contact-form">
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="email" placeholder="Your Email" required>
-                    <input type="tel" placeholder="Your Phone" required>
-                    <textarea placeholder="Your Message" rows="5" required></textarea>
                     <button type="submit" class="cta-button">Send Message</button>
                 </form>
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="info-item">
+                        <span class="info-icon">📍</span>
+                        <div>
+                            <h4>Address</h4>
+                            <p>123 Marina Drive, Waterfront City, WC 12345</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon">📞</span>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>1-800-CATCHIT (1-800-228-2448)</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon">✉️</span>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@catchmaster.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon">🕐</span>
+                        <div>
+                            <h4>Hours</h4>
+                            <p>Mon-Fri: 8AM - 6PM<br>Sat-Sun: 9AM - 5PM</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -167,12 +226,41 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Catch & Reel Fishing Company. All rights reserved.</p>
-            <div class="social-links">
-                <a href="#">Facebook</a>
-                <a href="#">Instagram</a>
-                <a href="#">Twitter</a>
-                <a href="#">YouTube</a>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>CatchMaster</h4>
+                    <p>Your premier destination for fishing gear and outdoor adventure.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-icon">f</a>
+                        <a href="#" class="social-icon">t</a>
+                        <a href="#" class="social-icon">i</a>
+                        <a href="#" class="social-icon">y</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 CatchMaster Fishing Co. All rights reserved.</p>
             </div>
         </div>
     </footer>
